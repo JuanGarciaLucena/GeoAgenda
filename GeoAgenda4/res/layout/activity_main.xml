@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" 
+    android:background="#282828">
+    
+    <ImageView
+        android:id="@+id/splashscreen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/geoagenda" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/splashscreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="@string/gA_title"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/devBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appTitle"
+        android:layout_marginTop="40dp"
+        android:text="@string/gA_developedBy" 
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+   	<TextView
+        android:id="@+id/devName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devBy"
+        android:layout_marginTop="14dp"
+        android:text="@string/gA_devName"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" 
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/devSupervisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devName"
+        android:layout_marginTop="18dp"
+        android:text="@string/gA_devSupervisor"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/devSupervisorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devSupervisor"
+        android:layout_marginTop="14dp"
+        android:text="@string/gA_devSupervisorName"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" 
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
