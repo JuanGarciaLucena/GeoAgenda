@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="main_color">#2D6C93</color>
+    <color name="main_color">#282828</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="dashboard_selected_color">#46B5E5</color>
     
 </resources>

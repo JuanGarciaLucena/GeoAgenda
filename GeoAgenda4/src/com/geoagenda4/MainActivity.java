@@ -2,18 +2,22 @@ package com.geoagenda4;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
 	
-	private final int SPLASH_DISPLAY_LENGHT = 5000;
+	//TODO Cambiar tiempo
+	private final int SPLASH_DISPLAY_LENGHT = 500;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		ActionBar actionBar = getActionBar();
+		actionBar.hide();
 		
 		new Handler().postDelayed(new Runnable(){
 			public void run() {

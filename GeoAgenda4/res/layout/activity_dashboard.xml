@@ -1,89 +1,57 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DashboardActivity"
-    android:background="#282828">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="52dp"
-        android:src="@drawable/calendar_icon" 
-        android:onClick="onClickEvents"/>
+        android:background="@color/main_color"
+        android:orientation="vertical"
+        android:padding="5dp" >
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="115dp"
-        android:src="@drawable/settings_icon" 
-        android:onClick="onClickSettings"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/imageView1"
-        android:layout_marginRight="35dp"
-        android:src="@drawable/new_appointment_icon" 
-        android:onClick="onClickNewEvent"/>
+            <Button
+                android:id="@+id/button1"
+                style="@style/dashboard_button"
+                android:drawableTop="@drawable/calendar_icon"
+                android:text="@string/dashboard_events" 
+                android:onClick="onClickEvents"/>
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView3"
-        android:layout_alignTop="@+id/imageView2"
-        android:src="@drawable/about_icon" 
-        android:onClick="onClickAbout"/>
+            <Button
+                android:id="@+id/button2"
+                style="@style/dashboard_button"
+                android:drawableTop="@drawable/new_appointment_icon"
+                android:text="@string/dashboard_new_event" 
+                android:onClick="onClickNewEvent"/>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/dasboard_events" 
-        android:textColor="#FFFFFF"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignRight="@+id/imageView3"
-        android:text="@string/dashboard_new_event" 
-        android:textColor="#FFFFFF"/>
+            <Button
+                android:id="@+id/button3"
+                style="@style/dashboard_button"
+                android:drawableTop="@drawable/settings_icon"
+                android:text="@string/dashboard_settings" 
+                android:onClick="onClickSettings"/>
 
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/imageView2"
-        android:layout_below="@+id/imageView4"
-        android:layout_marginTop="19dp"
-        android:text="@string/dashboard_settings" 
-        android:textColor="#FFFFFF"/>
+            <Button
+                android:id="@+id/button4"
+                style="@style/dashboard_button"
+                android:drawableTop="@drawable/about_icon"
+                android:text="@string/dashboard_about" 
+                android:onClick="onClickAbout"/>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/TextView03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView02"
-        android:layout_alignBottom="@+id/TextView02"
-        android:layout_alignLeft="@+id/imageView4"
-        android:text="@string/dashboard_about" 
-        android:textColor="#FFFFFF"/>
+    </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

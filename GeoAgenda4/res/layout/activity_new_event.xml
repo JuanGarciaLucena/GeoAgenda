@@ -1,4 +1,5 @@
 <ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -8,11 +9,10 @@
     android:background="#282828">
 
     <RelativeLayout
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".NewEventActivity" 
-        android:background="#282828">
+        android:background="#282828"
+        tools:context=".NewEventActivity" >
 
         <EditText
             android:id="@+id/idEventName"
@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:hint="@string/new_event_event_title" />
+            android:textColor="#46B5E5"
+            android:hint="@string/new_event_event_title"/>
 
         <EditText
             android:id="@+id/idEventAddress"
@@ -30,88 +31,112 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
             android:hint="@string/new_event_address"
+            android:textColor="#46B5E5"
             android:inputType="textPostalAddress" />
-
+        
+        <EditText
+            android:id="@+id/idEventCity"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idEventAddress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:hint="@string/new_event_city"
+            android:textColor="#46B5E5"
+            android:inputType="textPostalAddress" />
+        
+         <TextView
+            android:id="@+id/textDateTime"
+            android:textColor="#7B7B7B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/idEventAddress"
+            android:layout_below="@+id/idEventCity"
+            android:layout_marginTop="16dp"
+            android:text="@string/new_event_dateTime" />
+        
         <Button
             android:id="@+id/idButtonDate"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_alignLeft="@+id/idEventAddress"
-            android:layout_below="@+id/idEventAddress"
-            android:layout_marginTop="25dp"
+            android:layout_below="@+id/textDateTime"
+            android:layout_marginTop="10dp"
             android:onClick="onClickButtonDate"
+            android:text="@string/new_event_choose_date"
+            android:textColor="#46B5E5"
+            android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/ButtonHour"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/idButtonDate"
+            android:layout_alignBottom="@+id/idButtonDate"
+            android:layout_alignRight="@+id/idEventCity"
+            android:onClick="onClickButtonTime"
+            android:text="@string/new_event_choose_time"
+            android:textColor="#46B5E5"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/idTextReminder"
+            android:textColor="#7B7B7B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/idEventAddress"
+            android:layout_below="@+id/idButtonDate"
+            android:layout_marginTop="16dp"
+            android:text="@string/new_event_choose_timeAlert" />
+        
+        <TextView
+            android:id="@+id/idTextSelectRingtone"
+            android:textColor="#7B7B7B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/idEventAddress"
+            android:layout_below="@+id/idSelectReminderDate"
+            android:layout_marginTop="16dp"
+            android:text="@string/new_event_ringtone" />
+        
+        <Button
+            android:id="@+id/ButtonRingtone"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/idTextSelectRingtone"
+            android:layout_alignRight="@+id/idEventCity"
+            android:layout_marginTop="10dp"
+            android:text="@string/new_event_choose_ringtone"
+            android:textColor="#46B5E5"
+            android:textSize="15sp"
+            android:onClick="onClickRingtone" 
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/idSelectReminderDate"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/idTextReminder"
+            android:layout_below="@+id/idTextReminder"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickReminderButtonDate"
             android:text="@string/new_event_choose_date"
             android:textColor="#46B5E5"
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/idButtonHour"
+            android:id="@+id/idSelectReminderTime"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_alignLeft="@+id/idEventAddress"
-            android:layout_below="@+id/idButtonDate"
-            android:layout_marginTop="5dp"
-            android:onClick="onClickButtonTime"
+            android:layout_alignBaseline="@+id/idSelectReminderDate"
+            android:layout_alignBottom="@+id/idSelectReminderDate"
+            android:layout_alignLeft="@+id/ButtonHour"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickReminderButtonTime"
             android:text="@string/new_event_choose_time"
             android:textColor="#46B5E5"
             android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/idButtonAlert"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignLeft="@+id/idEventAddress"
-            android:layout_below="@+id/idButtonHour"
-            android:layout_marginTop="5dp"
-            android:text="@string/new_event_choose_ringtone"
-            android:textColor="#46B5E5"
-            android:textSize="15sp" 
-            android:onClick="onClickAlert"/>
-
-        <Button
-            android:id="@+id/idButtonPreviousTime"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignLeft="@+id/idEventAddress"
-            android:layout_below="@+id/idButtonAlert"
-            android:layout_marginTop="5dp"
-            android:text="@string/new_event_choose_timeAlert"
-            android:textColor="#46B5E5"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/idButtonContinue"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_alignLeft="@+id/idEventAddress"
-            android:layout_below="@+id/idButtonPreviousTime"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:text="@string/gA_continueButton"
-            android:textColor="#46B5E5" />
-
-        <TextView
-            android:id="@+id/idTextViewDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/idButtonDate"
-            android:layout_alignBottom="@+id/idButtonDate"
-            android:layout_alignRight="@+id/idEventAddress"
-            android:textColor="#46B5E5"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/idTextViewTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/idButtonHour"
-            android:layout_alignBottom="@+id/idButtonHour"
-            android:layout_alignRight="@+id/idTextViewDate"
-            android:textColor="#46B5E5"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
+        
     </RelativeLayout>
 
 </ScrollView>

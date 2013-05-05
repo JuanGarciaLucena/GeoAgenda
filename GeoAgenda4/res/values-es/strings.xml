@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- application strings -->
+    <string name="app_name">GeoAgenda</string>
+    <string name="app_continue_button">Continuar</string>
+    <string name="app_ok">OK</string>
+    <string name="app_cancel">Cancel</string>
+    <string name="app_save">Guardar</string>
+    
+    
+    <!-- activity_main strings -->
+    <string name="gA_title">Proyecto Informático</string>
+    <string name="gA_developedBy">Desarrollado por:</string>
+    <string name="gA_devName">Juan Antonio García Lucena</string>
+    <string name="gA_devSupervisor">Tutor:</string>
+    <string name="gA_devSupervisorName">José Ramón Portillo</string>
+    
+    <!-- activity_dashboard strings -->
+    <string name="dashboard_title">Panel de inicio</string>
+    <string name="dashboard_events">Eventos</string>
+    <string name="dashboard_new_event">Nuevo evento</string>
+    <string name="dashboard_settings">Ajustes</string>
+    <string name="dashboard_about">Información</string>
+    
+    <!-- activity_new_event strings -->
+    <string name="new_event_event_title">Título del evento</string>
+    <string name="new_event_address">Dirección del evento</string>
+    <string name="new_event_choose_date">Fecha</string>
+    <string name="new_event_choose_time">Hora</string>
+    <string name="new_event_choose_ringtone">Seleccione una alerta</string>
+    <string name="new_event_choose_timeAlert">Recordatorio</string>
+    <string name="new_event_dateTime">Establecer fecha y hora</string>
+    <string name="new_event_city">Ciudad del evento</string>
+    <string name="new_event_reminder">Recordatorio</string>
+    <string name="new_event_ringtone">Alerta</string>
+    
+    <!-- fragment_calendar strings -->
+    <string name="calendar_fragment_date">Seleccione una fecha</string>
+    
+    <!-- fragment_time strings -->
+    <string name="time_fragment_title">Seleccione una hora</string>
+    
+    <!-- fragment_reminder strings -->
+    
+    <string-array name="times_reminder">
+        <item>10 minutos</item>
+        <item>20 minutos</item>
+        <item>30 minutos</item>
+        <item>40 minutos</item>
+        <item>50 minutos</item>
+        <item>1 hora</item>
+    </string-array>
+
+</resources>
