@@ -17,7 +17,7 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/idTestButton"
                 style="@style/dashboard_button"
                 android:drawableTop="@drawable/calendar_icon"
                 android:text="@string/dashboard_events" 

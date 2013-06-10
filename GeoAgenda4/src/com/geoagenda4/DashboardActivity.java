@@ -27,9 +27,8 @@ public class DashboardActivity extends Activity {
 	}
 	
 	public void onClickEvents(View view){
-		Intent intent = new Intent(view.getContext(), TestActivity.class);
+		Intent intent = new Intent(view.getContext(), EventsListActivity.class);
 		startActivity(intent);
-		//Toast.makeText(getApplicationContext(), "Eventos", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void onClickNewEvent(View view){
@@ -42,7 +41,8 @@ public class DashboardActivity extends Activity {
 	}
 	
 	public void onClickAbout(View view){
-		Toast.makeText(getApplicationContext(), "Informaci—n", Toast.LENGTH_SHORT).show();
+		Intent intent = new Intent(view.getContext(), AboutActivity.class);
+		startActivity(intent);
 	}
 
 }

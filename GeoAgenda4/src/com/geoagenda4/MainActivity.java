@@ -9,8 +9,7 @@ import android.view.Menu;
 
 public class MainActivity extends Activity {
 	
-	//TODO Cambiar tiempo
-	private final int SPLASH_DISPLAY_LENGHT = 500;
+	private final int SPLASH_DISPLAY_LENGHT = 2000;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 public class EventsSQLiteHelper extends SQLiteOpenHelper{
 	
-	String sqlCreate = "CREATE TABLE IF NOT EXISTS Events (id INTEGER PRIMARY KEY, title TEXT, address TEXT, hour TEXT, reminder TEXT, alert TEXT)";
+	String sqlCreate = "CREATE TABLE IF NOT EXISTS Events (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, address TEXT, city TEXT, date TEXT, time TEXT, reminderDate TEXT, reminderTime TEXT, alert TEXT)";
 	
 	public EventsSQLiteHelper (Context context, String name, CursorFactory factory, int version){
 		super(context, name, factory, version);

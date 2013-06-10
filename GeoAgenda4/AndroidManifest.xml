@@ -7,26 +7,35 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="15" />
-    
-    <permission 
+
+    <permission
         android:name="com.geoagenda4.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature"/>
-    <uses-permission android:name="com.geoagenda4.permission.MAPS_RECEIVE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-	
-	<uses-feature android:glEsVersion="0x00020000"
-              android:required="true"/>
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.geoagenda4.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/geoa"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <meta-data android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCTHuerAX3IWRAjm_lBiueXTeF39VikLLc"/>
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCTHuerAX3IWRAjm_lBiueXTeF39VikLLc" />
+
         <activity
             android:name="com.geoagenda4.MainActivity"
             android:label="@string/app_name" >
@@ -38,20 +47,37 @@
         </activity>
         <activity android:name="com.geoagenda4.DashboardActivity" >
         </activity>
-        <activity 
-            android:name="com.geoagenda4.NewEventActivity">
-        </activity>
-        <activity
-            android:name="com.geoagenda4.CalendarActivity"
-            android:theme="@android:style/Theme.Dialog" >
-        </activity>
-        <activity
-            android:name="com.geoagenda4.TimePickerActivity"
-            android:theme="@android:style/Theme.Dialog" >
+        <activity android:name="com.geoagenda4.NewEventActivity" >
         </activity>
         <activity
             android:name="com.geoagenda4.TestActivity"
             android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name="com.geoagenda4.EventsListActivity"
+            android:label="@string/title_activity_events_list" >
+        </activity>
+        <activity
+            android:name="com.geoagenda4.ShowEventActivity"
+            android:label="@string/title_activity_show_event" >
+        </activity>
+
+        <receiver
+            android:name="com.geoagenda4.AlarmReceiver"
+            android:process=":remote" >
+        </receiver>
+        <receiver
+            android:name="com.geoagenda4.AlarmRouteReceiver"
+            android:process=":remote" >
+        </receiver>
+
+        <activity
+            android:name="com.geoagenda4.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name="com.geoagenda4.MapActivity"
+            android:label="@string/title_activity_map" >
         </activity>
     </application>
 

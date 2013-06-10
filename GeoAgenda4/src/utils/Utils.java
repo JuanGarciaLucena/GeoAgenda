@@ -1,10 +1,39 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.maps.GeoPoint;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.util.Log;
+import android.widget.Toast;
 
 public class Utils {
 	
@@ -80,5 +109,39 @@ public class Utils {
 			e.printStackTrace();
 		}
 		return res;
+	}
+	
+	
+	public static Dialog createDialog(Context context, String title, String message){
+			
+	    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+	 
+	    builder.setTitle(title);
+	    builder.setMessage(message);
+	    builder.setPositiveButton("OK", new OnClickListener() {
+	        public void onClick(DialogInterface dialog, int which) {
+	            dialog.cancel();
+	        }
+	    });
+	 
+	    return builder.create();
+	}
+	
+	
+	public static List<Address> getLocationInfo(String address, Context context){
+		Geocoder coder = new Geocoder(context);
+		List<Address> addresses = new ArrayList<Address>();
+		try {
+		    addresses = coder.getFromLocationName(address, 5);
+		    Log.d("locations", "Entra en el try");
+		    if(address.isEmpty()){
+		    	Log.d("locations", "No existen direcciones");
+		    	Toast.makeText(context, "No existen direcciones", Toast.LENGTH_SHORT).show();
+		    }
+		}catch(IOException e){
+			Log.d("locations", "PASO4");
+			e.printStackTrace();
+		}
+		return addresses;
 	}
 }

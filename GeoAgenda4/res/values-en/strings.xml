@@ -7,6 +7,9 @@
     <string name="app_ok">OK</string>
     <string name="app_cancel">Cancel</string>
     <string name="app_save">Save</string>
+    <string name="app_delete">Delete</string>
+    <string name="app_map">Map</string>
+    <string name="app_advice">Atention</string>
     
     <!-- activity_main strings -->
     <string name="gA_title">Project</string>
@@ -33,6 +36,16 @@
     <string name="new_event_city">Event city</string>
     <string name="new_event_reminder">Reminder</string>
     <string name="new_event_ringtone">Ringtone</string>
+    <string name="new_event_alert_title">Error</string>
+    <string name="new_event_alert_info">Some field or fields are empty</string>
+    <string name="new_event_alert_empty_date_time">Dates and times empty</string>
+    <string name="new_event_alert_event_previous">Event date is previous than current date</string>
+    <string name="new_event_alert_reminder_previous">Reminder date is previous than current date</string>
+    <string name="new_event_alert_reminder_previous_event">Reminder date is after than event date</string>
+    <string name="new_event_alert_time_reminder_previous">The time reminder is the same or after than the event time</string>
+    <string name="new_event_alert_tone_reminder">You have to choose an alert tone</string>
+    <string name="new_event_alert_title_saved">Alert</string>
+    <string name="new_event_alert_event_saved">Event saved</string>
     
     <!-- fragment_calendar strings -->
     <string name="calendar_fragment_date">Select a date</string>
@@ -40,15 +53,16 @@
     <!-- fragment_time strings -->
     <string name="time_fragment_title">Select an hour</string>
     
-    <!-- fragment_reminder strings -->
+    <!-- activity_events_list -->
+    <string name="title_events_list">Events List</string>
     
-    <string-array name="times_reminder">
-        <item>10 minutes</item>
-        <item>20 minutes</item>
-        <item>30 minutes</item>
-        <item>40 minutes</item>
-        <item>50 minutes</item>
-        <item>1 hour</item>
-    </string-array>
+    <!-- activity_show_events -->
+    <string name="show_event_address">Address</string>
+    <string name="show_event_city">City</string>
+    <string name="show_event_date">Date</string>
+    <string name="show_event_reminder">Reminder</string>
+    <string name="show_event_tone">Ringtone</string>
+    <string name="show_event_delete_confirmation">You are going to delete this event. Are you sure?</string>
+    
 
 </resources>
