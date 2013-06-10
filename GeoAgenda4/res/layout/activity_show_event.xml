@@ -1,0 +1,154 @@
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idScrollViewShowEvent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true" 
+    android:background="#282828">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#282828"
+        tools:context=".ShowEventActivity" >
+        
+
+	    <TextView
+	        android:id="@+id/idShowTitleEventAddress"
+	        android:layout_width="wrap_content"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="20dp"
+	        android:text="@string/show_event_address"
+	        android:textColor="@color/systemColor" />	    
+
+	    <TextView
+	        android:id="@+id/idShowEventAddress"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowTitleEventAddress"
+	        android:layout_marginTop="15dp"
+	        android:textSize="15sp"
+	        android:textColor="#FFFFFF" />
+	    
+	    
+	    
+	    
+	    
+	
+	    <TextView
+	        android:id="@+id/idShowTitleEventCity"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowEventAddress"
+	        android:layout_marginTop="20dp"
+	        android:textColor="@color/systemColor"
+	        android:text="@string/show_event_city" />
+	
+	    <TextView
+	        android:id="@+id/idShowEventCity"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowTitleEventCity"
+	        android:textColor="#FFFFFF"
+	        android:layout_marginTop="15dp"
+	        android:textSize="15sp"/>
+	    
+	    
+	    
+	    
+	    
+	    
+	
+	    <TextView
+	        android:id="@+id/idShowTitleEventDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowEventCity"
+	        android:layout_marginTop="20dp"
+	        android:textColor="@color/systemColor"
+	        android:text="@string/show_event_date" />
+	    
+	    <TextView
+	        android:id="@+id/idShowEventDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowTitleEventDate"
+	        android:textColor="#FFFFFF"
+	        android:layout_marginTop="15dp"
+	        android:textSize="15sp"/>
+	    
+	    
+	    
+	    
+	    
+	
+	    <TextView
+	        android:id="@+id/idShowTitleEventReminder"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowEventDate"
+	        android:layout_marginTop="20dp"
+	        android:textColor="@color/systemColor"
+	        android:text="@string/show_event_reminder" />
+	
+	    
+	
+	    <TextView
+	        android:id="@+id/idShowEventReminder"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowTitleEventReminder"
+	        android:textColor="#FFFFFF"
+	        android:layout_marginTop="15dp"
+	        android:textSize="15sp"/>
+	    
+	    
+	    
+	    
+	    
+	
+	    <TextView
+	        android:id="@+id/idShowTitleEventTone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowEventReminder"
+	        android:textColor="@color/systemColor"
+	        android:layout_marginTop="20dp"
+	        android:text="@string/show_event_tone" />
+	
+	    <TextView
+	        android:id="@+id/idShowEventTone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/idShowTitleEventTone"
+	        android:layout_marginTop="15dp"
+	        android:textSize="15sp"
+	        android:textColor="#FFFFFF"
+	        android:text="NINGUNO"/>
+
+	    
+	
+	</RelativeLayout>
+</ScrollView>

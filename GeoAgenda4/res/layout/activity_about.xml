@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity" 
+    android:background="#282828">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/text_color"
+        android:text="Esta aplicación esta desarrollada por Juan Antonio García Lucena. Estudiante de Ingeniería Técnica en Informática 
+        de Gestión como parte de su Proyecto de Fin de Carrera. Este proyecto ha sido tutorizado por José Ramón Portillo. Para el desarrollo
+        de esta aplicación solo se ha utilizado software libre. 
+        Esta aplicación es software libre y por tanto se permite la copia y distribución de la misma.
+        El código fuente de la aplicación se encuentra alojado en Github en la siguiente dirección
+        \n     github.com/JuanGarciaLucena/GeoAgenda" />
+
+</RelativeLayout>

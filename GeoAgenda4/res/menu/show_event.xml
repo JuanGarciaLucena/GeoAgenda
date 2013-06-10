@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/idDeleteEvent"
+        android:orderInCategory="100"
+        android:icon="@drawable/delete"
+        android:title="@string/app_delete"
+        android:showAsAction="ifRoom|withText"/>
+    
+    <item
+        android:id="@+id/idShowMap"
+        android:orderInCategory="100"
+        android:icon="@drawable/map"
+        android:title="@string/app_map"
+        android:showAsAction="ifRoom|withText"/>
+
+</menu>
